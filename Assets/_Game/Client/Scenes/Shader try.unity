@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 232196703}
   - component: {fileID: 232196705}
   - component: {fileID: 232196704}
+  - component: {fileID: 232196706}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Grating Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,14 +149,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232196702}
-  m_LocalRotation: {x: -0, y: -0, z: 0.8163668, w: -0.5775338}
+  m_LocalRotation: {x: 0, y: -0, z: 0.8191521, w: -0.5735764}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1625683052}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 250.555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 250}
 --- !u!199 &232196704
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4935,6 +4936,49 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &232196706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232196702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9802eb841c879284f851270c852d47ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &355564699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355564700}
+  m_Layer: 0
+  m_Name: Startposition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &355564700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355564699}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.29, y: 1.39, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &722607620
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,6 +4989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722607622}
   - component: {fileID: 722607621}
+  - component: {fileID: 722607627}
   - component: {fileID: 722607624}
   - component: {fileID: 722607625}
   - component: {fileID: 722607626}
@@ -4995,13 +5040,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: db23b6d97ef54624d8d40392ec7d8346, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 119b809e259cdfd4fb3f095d540ef408, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 2.26, y: 2.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5015,7 +5060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722607620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: 2.21, z: 0}
+  m_LocalPosition: {x: -1.29, y: 1.39, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5034,8 +5079,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5570e1d8c7cd543a4c7239c46b93ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rubbingValue: 1
-  stationaryTolerance: 0.005
+  _fruits:
+  - {fileID: 11400000, guid: 901af8a8c121a594a907d846ccfd8eca, type: 2}
+  - {fileID: 11400000, guid: 0c38bcad5418eb6478401cd4925001c1, type: 2}
+  - {fileID: 11400000, guid: fef289998afaaff44ab019bcd97965fd, type: 2}
+  _objectView: {fileID: 722607627}
+  _particleController: {fileID: 232196706}
+  _resetGameposition: {fileID: 355564700}
 --- !u!61 &722607625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5049,12 +5099,12 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025653958, y: 0.107746184}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 2.0257144, y: 2.5085714}
+    newSize: {x: 2.26, y: 2.05}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -5083,6 +5133,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &722607627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722607620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e3a1abee40fbd4d9d180c6aaa1fde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379473433
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,7 +5228,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379473437
 MonoBehaviour:
@@ -5213,8 +5275,8 @@ GameObject:
   - component: {fileID: 1625683051}
   - component: {fileID: 1625683053}
   m_Layer: 0
-  m_Name: gratericon
-  m_TagString: Grather
+  m_Name: Grater
+  m_TagString: Grater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5285,7 +5347,7 @@ Transform:
   m_Children:
   - {fileID: 232196703}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1625683053
 BoxCollider2D:
@@ -5342,5 +5404,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

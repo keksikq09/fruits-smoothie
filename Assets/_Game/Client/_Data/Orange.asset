@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc67be8b9999484c8070e1419b1c6bc, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  _mainTexture: {fileID: 21300000, guid: 24140a74526c9104092b1911693f68c6, type: 3}
+  _maskFormat: 5
+  _maskTexture: {fileID: 21300000, guid: 72e998e8545030f45a31c3c7f139e214, type: 3}
+  _startGraterValue: 1
