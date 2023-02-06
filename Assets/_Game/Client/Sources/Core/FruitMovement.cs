@@ -5,6 +5,10 @@ namespace Game.Core.FruitLogic
     public class FruitMovement : MonoBehaviour
     {
         private bool _isSelected;
+        public void Deselect()
+        {
+            _isSelected = false;
+        }
 
         private void OnMouseDown()
         {

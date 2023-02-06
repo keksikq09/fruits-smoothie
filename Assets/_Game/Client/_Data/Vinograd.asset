@@ -16,3 +16,4 @@ MonoBehaviour:
   _maskFormat: 5
   _maskTexture: {fileID: 21300000, guid: 72e998e8545030f45a31c3c7f139e214, type: 3}
   _startGraterValue: 1
+  _particleColor: {r: 0.7550728, g: 0.22605905, b: 0.9433962, a: 1}

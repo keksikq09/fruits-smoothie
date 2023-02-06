@@ -66,6 +66,8 @@ namespace Game.Core.FruitLogic
 
         private void ResetGame()
         {
+            _onGameReset?.Invoke();
+            transform.position = _resetGamePosition.position;
             _rubbingValue = 1f;
             _currentFruit = SetNewFruit();
             _boxCollider.offset = Vector2.zero;
